@@ -1,0 +1,11 @@
+<h1><%= @user.username %>さんのhome</h1>
+<p>フォロー数<%= @followings.size %></p>
+<p>フォロワー数<%= @followers.size %></p>
+<% @my_memo.each do |memo| %>
+  <span><%= memo.user.username %></span>
+  <span><%= memo.content %></span>
+  <span><%= memo.created_at.strftime("%Y/%m/%d %R") %></span>
+<% end %>
+
+
+
