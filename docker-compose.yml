@@ -14,9 +14,9 @@ services:
     env_file: ./.env
     build: .
     volumes:
-      - .:/pop-books
-      - tmp-data:/pop-books/tmp
-      - public-data:/pop-books/public
+      - .:/memotter
+      - tmp-data:/memotter/tmp
+      - public-data:/memotter/public
     ports:
       - "3000:3000"
     environment:
