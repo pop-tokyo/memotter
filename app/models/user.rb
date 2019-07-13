@@ -16,4 +16,16 @@ class User < ApplicationRecord
   has_many :comments
   has_many :stocks
   has_many :likes
+
+
+  def follow(other_user)
+    return if self == other_user
+
+    other_user.user_relationships.find_or_create_by(follower: self)
+  end
+
+  def following?(other_user)
+    # todo ここエラー
+    # self.followings.include?(other_user)
+  end
 end

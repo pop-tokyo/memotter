@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user_relationship/follow'
   get 'memos/create'
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show]
   resources :memos, only: [:create]
+  resources  :user_relationship, only: [:create]
 end
