@@ -1,0 +1,7 @@
+<li id="memo-<%= memo.id %>">
+  <span class="user"><%= link_to memo.user.username, memo.user %> / </span>
+  <span class="content"><%= memo.content %>/ </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(memo.created_at) %> ago.
+  </span>
+</li>

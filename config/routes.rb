@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'memos/create'
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
   root to: "top#index"
 
   resources :users, only: [:index, :show]
+  resources :memos, only: [:create]
 end

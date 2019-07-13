@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :reverse_of_user_relationships, class_name: 'UserRelationship', foreign_key: 'follower_id'
   has_many :following, through: :reverse_of_user_relationships, source: :user
 
+  # dependent: :destroyは一旦書かないでおく。何故ならばユーザーが退会したらいいね数が減る、コメントが消えるのは問題だから。
   has_many :memos
   has_many :comments
   has_many :stocks

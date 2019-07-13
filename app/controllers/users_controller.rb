@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @followings = @user.following
     @followers = @user.followers
-    @my_memo = @user.memos
-    # @all_memos = Memo.where(user: )
+    @all_memos = Memo.where(user: @followings.pluck(:user_id) << @user.id)
+    # @new_memo = @user.memos.build
   end
 end
