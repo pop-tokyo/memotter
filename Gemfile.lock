@@ -193,6 +193,17 @@ GEM
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-byebug (3.7.0)
+      byebug (~> 11.0)
+      pry (~> 0.10)
+    pry-doc (1.0.0)
+      pry (~> 0.11)
+      yard (~> 0.9.11)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     public_suffix (3.1.1)
     puma (3.12.1)
     rack (2.0.7)
@@ -338,6 +349,9 @@ DEPENDENCIES
   omniauth-facebook
   pg (>= 0.18, < 2.0)
   poltergeist
+  pry-byebug
+  pry-doc
+  pry-rails
   puma (~> 3.11)
   rails (= 5.2.3)
   rails-erd

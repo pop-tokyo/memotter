@@ -49,6 +49,9 @@ group :development, :test do
   gem 'yard'
   gem 'hirb'
   gem 'hirb-unicode'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -61,7 +64,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener_web'
-
 end
 
 group :test do
